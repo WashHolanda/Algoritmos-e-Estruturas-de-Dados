@@ -15,7 +15,7 @@ void mescla (int *vet1, int tam1, int *vet2, int tam2){
 	tam = tam1+tam2;
 	vet = (int*) malloc((tam)*sizeof(int));
 	
-	//Preenchimento do vetor temporário (vetor totalmente ordenado)
+	//Preenchimento do vetor temporï¿½rio (vetor totalmente ordenado)
 	for(i=0;i<tam;i++){
 		if(aux1<tam1 && aux2<tam2){
 			if(vet1[aux1]<vet2[aux2]){
@@ -70,5 +70,8 @@ int main(){
 	}
 	
 	mescla(vet1,n1,vet2,n2);
+	
+	free(vet1);
+	free(vet2);
 	return 0;
 }
